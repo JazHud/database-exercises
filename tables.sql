@@ -8,10 +8,3 @@ CREATE TABLE users (
     last_name VARCHAR(65) NOT NULL,
     PRIMARY KEY (user_id)
 );
---
--- CREATE TABLE users (
---     user_id INT NOT NULL AUTO_INCREMENT,
---     first_name VARCHAR(35) NOT NULL,
---     last_name VARCHAR(65) NOT NULL,
---     PRIMARY KEY (user_id)
--- );
