@@ -1,5 +1,8 @@
 USE employees;
 
+-- HINT smalleer the query the better
+
+-- WHERE CLAUSES
 SELECT * FROM employees WHERE hire_date = '1985-01-01';
 
 SELECT first_name FROM employees WHERE first_name Like '%sus%';
@@ -45,3 +48,14 @@ SELECT * FROM employees WHERE birth_date LIKE '1954-01-%' ORDER BY birth_date;
 
 SELECT * FROM employees WHERE birth_date LIKE '1954-01-%' ORDER BY birth_date, last_name;
 
+-- LIMIT and OFFSET Clause
+
+SELECT * FROM employees WHERE birth_date LIKE '1954-01%' ORDER BY birth_date, last_name LIMIT 50;
+-- showing all bd's that were born in January of 1954 ordered by last name AND by the day born
+
+SELECT * FROM employees WHERE birth_date LIKE '1954-01%' ORDER BY birth_date, last_name LIMIT 50 OFFSET 50;
+
+-- _ <-- underscore wildcard means a single space and and add _ for more spaces
+-- % <-- percent wildcard means any number of spaces or characters before specific input
+SELECT * FROM employees WHERE last_name LIKE '__e%';
+    -- above will select all last name with the third character "e"
