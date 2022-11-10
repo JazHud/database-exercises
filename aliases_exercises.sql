@@ -10,3 +10,12 @@ SELECT CONCAT(emp_no,  ' - ', last_name, ', ', first_name) AS full_name, birth_d
 LIMIT 10;
 
 SHOW INDEXES FROM employees;
+
+SHOW INDEXES FROM salaries;
+
+SELECT salary FROM salaries WHERE salary BETWEEN 50000 AND 60000;
+
+-- to add an index
+ALTER TABLE salaries ADD INDEX salary_index_name (salary);
+
+ALTER TABLE salaries DROP INDEX salary_index_name;
